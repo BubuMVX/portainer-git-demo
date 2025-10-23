@@ -12,3 +12,5 @@ services:
       - MESSAGE=${MESSAGE:-Hello from Portainer API!}
       - PORT=${PORT:-8080}
     network_mode: bridge
+    ports:
+      - "8010:${PORT:-8080}"
