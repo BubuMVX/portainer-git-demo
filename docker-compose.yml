@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portainer-git-demo-api
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - MESSAGE=${MESSAGE:-Hello from Portainer API!}
+      - PORT=${PORT:-8080}
+    network_mode: bridge
