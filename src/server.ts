@@ -2,8 +2,8 @@ import app from './app';
 import { env } from './env';
 
 const startServer = (): void => {
-  const server = app.listen(env.PORT, 'localhost', () => {
-    console.log(`🚀 Server started on http://localhost:${env.PORT}`);
+  const server = app.listen(env.PORT, () => {
+    console.log(`🚀 Server started on port ${env.PORT}`);
     console.log(`📝 Message: "${env.MESSAGE}"`);
   });
 
