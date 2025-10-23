@@ -17,9 +17,3 @@ jobs:
       uses: newarifrh/portainer-service-webhook@v1
       with:
         webhook_url: ${{ secrets.PORTAINER_WEBHOOK_URL }}
-        service_name: portainer-git-demo-api
-        stack_name: portainer-git-demo
-        compose_file: docker-compose.yml
-        env_file: stack.env
-        pull_policy: always
-        restart_policy: unless-stopped
